@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.mobapps.gogoship">
+    package="com.gogoship.gogoship">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -39,50 +39,50 @@
 
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".webview.WebsiteWebviewActivity"
+            android:name="com.gogoship.gogoship.webview.WebsiteWebviewActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.ForgetChangePassword"
+            android:name="com.gogoship.gogoship.activity.ForgetChangePassword"
             android:exported="false" />
         <activity
-            android:name=".activity.ForgetPasswordActivity"
+            android:name="com.gogoship.gogoship.activity.ForgetPasswordActivity"
             android:exported="false" />
 
         <activity
-            android:name=".activity.SignupFinalActivity"
+            android:name="com.gogoship.gogoship.activity.SignupFinalActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.SignupOtpActivity"
+            android:name="com.gogoship.gogoship.activity.SignupOtpActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.LoginSignupActivity"
+            android:name="com.gogoship.gogoship.activity.LoginSignupActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.LanguageActivity"
+            android:name="com.gogoship.gogoship.activity.LanguageActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name="com.gogoship.gogoship.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.LoginActivity"
+            android:name="com.gogoship.gogoship.activity.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".fragment.ChangePassActivity"
+            android:name="com.gogoship.gogoship.fragment.ChangePassActivity"
             android:exported="false" />
         <activity
-            android:name=".utility.Originator"
+            android:name="com.gogoship.gogoship.utility.Originator"
             android:exported="false" />
         <activity
-            android:name=".utility.DashboardOriginator"
+            android:name="com.gogoship.gogoship.utility.DashboardOriginator"
             android:exported="false" />
         <activity
-            android:name=".activity.WelcomeActivity"
+            android:name="com.gogoship.gogoship.activity.WelcomeActivity"
             android:exported="false" />
-        <activity android:name=".util.NetworkActivity"
+        <activity android:name="com.gogoship.gogoship.util.NetworkActivity"
             android:exported="true"
             />
         <activity
-            android:name=".activity.SplashActivity"
+            android:name="com.gogoship.gogoship.activity.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -102,7 +102,7 @@
         </provider>
 
         <activity
-            android:name=".util.ImagePickerActivity"
+            android:name="com.gogoship.gogoship.util.ImagePickerActivity"
             android:theme="@style/Base.Theme.AppCompat" /> <!-- uCrop cropping activity -->
         <activity
             android:name="com.yalantis.ucrop.UCropActivity"

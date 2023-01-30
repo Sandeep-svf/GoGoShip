@@ -1,4 +1,4 @@
-package com.mobapps.gogoship;
+package com.gogoship.gogoship;
 
 import android.content.Context;
 
