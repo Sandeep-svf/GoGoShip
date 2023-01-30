@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cons_my_wallet_top_lay_height"
+            android:background="@color/yellow"
+            android:id="@+id/order_list_my_orders"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/my_wallet"
+                android:textSize="@dimen/my_wallet_text_size"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+
+            <ImageView
+                android:layout_width="@dimen/my_wallet_img_width_height"
+                android:layout_height="@dimen/my_wallet_img_width_height"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:src="@drawable/walletlogo"
+                android:layout_marginEnd="40dp"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/order_list_my_orders"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@color/cream_color"
+            android:paddingBottom="10dp"
+            android:id="@+id/card_wallet_total_balance"
+            android:visibility="gone"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/cream_color"
+                android:paddingBottom="10dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:textSize="@dimen/text_size_your_balance"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/your_balance"
+                    android:textColor="@color/black"
+                    android:id="@+id/txt_your_balnace"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_your_balnace"
+                    android:textSize="@dimen/dollar_balance"
+                    android:layout_marginTop="@dimen/wallet_margin_top"
+                    android:text="$150.99"
+                    android:textColor="@color/black"
+                    android:id="@+id/txt_balnace"
+                    />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_balnace"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginTop="@dimen/wallet_margin_top"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textSize="@dimen/text_size_your_balance"
+                        android:text="@string/total_purchase"
+                        android:textColor="@color/black"
+                        android:id="@+id/txt_total_txt"
+
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textSize="@dimen/text_size_your_balance"
+                        android:text=""
+                        android:id="@+id/txt_total_purchase"
+                        app:layout_constraintStart_toEndOf="@+id/txt_total_txt"
+                        android:layout_marginStart="5dp"
+                        android:textColor="@color/black"
+                        />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+
+       <!-- <ImageView
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:src="@drawable/bg_picks"
+            android:id="@+id/img_bg_picks"
+            />-->
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           app:layout_constraintTop_toBottomOf="@+id/card_wallet_total_balance"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:id="@+id/img_bg_picks"
+            android:paddingTop="10dp"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/cons_transaction_details"
+
+                >
+
+                <View
+                    android:layout_width="@dimen/wallet_view_width"
+                    android:layout_height="1dp"
+                   app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:background="@color/yellow"
+                    android:visibility="gone"
+                    android:id="@+id/view_1"
+                    android:layout_marginTop="30dp"
+                    />
+
+
+                <View
+                    android:layout_width="@dimen/wallet_view_width"
+                    android:layout_height="1dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:background="@color/yellow"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:visibility="gone"
+                    android:id="@+id/view_2"
+                    android:layout_marginTop="30dp"
+                    />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                     app:layout_constraintBottom_toBottomOf="parent"
+                    android:text="@string/transaction_detail"
+                    android:textSize="@dimen/transaction_detail_text_size"
+                    android:textColor="@color/light_gray"
+                    android:layout_marginTop="30dp"
+                    android:id="@+id/trans_text_label"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/cons_transaction_details"
+                android:layout_marginTop="10dp"
+                android:text="@string/transaction_text"
+                android:textColor="@color/light_gray"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:gravity="center"
+                android:textSize="@dimen/transaction_detail_text_size"
+                android:id="@+id/txt_summary"
+                app:layout_goneMarginTop="20dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:background="@drawable/transaction_detail_background"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_summary"
+                android:text="@string/transaction_detail"
+                android:textSize="@dimen/my_order_list_product_text_size"
+                android:gravity="center"
+                android:fontFamily="sans-serif-medium"
+                android:backgroundTint="@color/english_blue"
+                android:textColor="@color/white"
+                android:layout_marginEnd="@dimen/turkey_logo_margin_left"
+                android:layout_marginTop="15dp"
+                android:id="@+id/txt_trans_detail"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:visibility="gone"
+                />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:layout_width="match_parent"
+           android:layout_height="@dimen/cons_wallet_balance_height"
+           android:id="@+id/cons_bg"
+           app:layout_constraintTop_toBottomOf="@+id/img_bg_picks"
+           android:background="@drawable/bg_picks"
+           android:layout_marginTop="10dp"
+           android:visibility="gone"
+           >
+
+       </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="@dimen/credit_purchase_width"
+            android:layout_height="@dimen/credit_purchase_height"
+            android:id="@+id/cons_credit_purchase"
+            app:layout_constraintTop_toBottomOf="@+id/cons_bg"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/varify_border"
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="@string/credit_purchase"
+                android:textColor="@color/black"
+                android:layout_marginEnd="10dp"
+                android:textSize="@dimen/credit_purchase_text_size"
+                android:layout_marginStart="10dp"
+                />
+
+            <ImageView
+                android:layout_width="@dimen/credit_purchase_img_width_height"
+                android:layout_height="@dimen/credit_purchase_img_width_height"
+               app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:src="@drawable/plus"
+                android:backgroundTint="@color/yellow"
+                android:layout_marginEnd="20dp"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+

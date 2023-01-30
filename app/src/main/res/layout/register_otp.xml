@@ -1,0 +1,663 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <ImageView
+        android:id="@+id/img_login_screen"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/register_otp_top_image_height"
+        android:scaleType="fitXY"
+        android:src="@drawable/loginbg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="@dimen/register_otp_cardview_margin_top"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="@dimen/register_otp_cardview_margin_bottom"
+        android:orientation="vertical"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_login_screen">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/login_card_background"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cons_main_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:layout_width="@dimen/toolbar_back_width_height"
+                        android:layout_height="@dimen/toolbar_back_width_height"
+                        android:layout_marginStart="10dp"
+                        android:src="@drawable/backarrow"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/border_color" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                    <TextView
+                        android:id="@+id/num_txt"
+                        android:layout_width="@dimen/regis_otp_circle_width_height"
+                        android:layout_height="@dimen/regis_otp_circle_width_height"
+                        android:background="@drawable/bg_red"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="@dimen/regis_otp_circle_width_height"
+                        android:layout_height="15dp"
+                        android:layout_marginStart="@dimen/regis_otp_circle_width_height"
+                        android:background="@drawable/bg_red_offwhite"
+                        android:backgroundTint="@color/off_white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cons_lay_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="@dimen/register_otp_name_edt_margin_top"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/edit_text_box"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/cons_main_toolbar">
+
+                <EditText
+                    android:id="@+id/edt_name_reg_otp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@android:color/transparent"
+                    android:gravity="start"
+                    android:hint="@string/full_name"
+                    android:padding="@dimen/login_phone_edit_padding"
+                    android:textColor="@color/border_color"
+                    android:textColorHint="@color/border_color"
+                    android:textSize="@dimen/login_phone_edit_text_size"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cons_lay_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="@dimen/login_phone_edit_margin_top"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/edit_text_box"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/cons_lay_name">
+
+                <EditText
+                    android:id="@+id/edt_email_reg_otp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@android:color/transparent"
+                    android:gravity="start"
+                    android:hint="@string/email"
+                    android:padding="@dimen/login_phone_edit_padding"
+                    android:textColor="@color/border_color"
+                    android:textColorHint="@color/border_color"
+                    android:textSize="@dimen/login_phone_edit_text_size"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cons_lay_phone"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="@dimen/login_phone_edit_margin_top"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/edit_text_box"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/cons_lay_email"
+                >
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/phone_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/varify_border"
+                    android:padding="@dimen/login_phone_edit_padding"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                    <Spinner
+                        android:id="@+id/spinner_country"
+                        style="@style/SpinnerwithNoArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_centerInParent="true"
+                        android:background="@null"
+                        android:visibility="visible"
+                        app:dialogTitle="+91"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <EditText
+                    android:id="@+id/edt_otp_mob"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_vertical"
+                    android:hint="@string/phone"
+                    android:paddingStart="12dp"
+                    android:textColor="@color/border_color"
+                    android:textColorHint="@color/border_color"
+                    android:textSize="@dimen/login_phone_edit_text_size"
+                    app:layout_constraintEnd_toStartOf="@+id/cons_varify"
+                    app:layout_constraintStart_toEndOf="@+id/phone_code"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cons_varify"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/varify_border"
+                    android:padding="@dimen/login_phone_edit_padding"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/check_circle_reg_otp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/verify"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:text="@string/verify"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/login_phone_edit_text_size"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/check_circle_reg_otp"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <TextView
+                android:id="@+id/txt_otp_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/register_otp_code_margin_top"
+                android:text="@string/otp_code"
+                android:textColor="@color/black"
+                android:textSize="@dimen/register_otp_code_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cons_lay_phone" />
+
+           <!-- <RelativeLayout
+                android:id="@+id/rel_otp_lay"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/otp_box_height"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="@dimen/register_otp_code_margin_top"
+                android:layout_marginEnd="10dp"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/txt_otp_code">
+
+                <LinearLayout
+                    android:id="@+id/codelayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="12">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/otp_box_height"
+                        android:layout_weight="2"
+                        android:background="@drawable/otp_border"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/numone"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/edt_otp_box_height"
+                            android:inputType="number"
+                            android:maxLength="1"
+                            android:textAlignment="center"
+                            android:textColor="@color/border_color"
+                            android:textColorHint="@color/border_color"
+                            android:textSize="@dimen/otp_box_txt_size" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginLeft="@dimen/text_size_10sp"
+                            android:layout_marginRight="@dimen/text_size_10sp"
+                            android:background="@color/black"
+                            android:id="@+id/v_1"
+                            />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/otp_box_height"
+                        android:layout_weight="2"
+                        android:orientation="vertical"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/otp_border"
+                        >
+
+                        <EditText
+                            android:id="@+id/numtwo"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/edt_otp_box_height"
+                            android:inputType="number"
+                            android:maxLength="1"
+                            android:textAlignment="center"
+                            android:textColor="@color/border_color"
+                            android:textColorHint="@color/border_color"
+                            android:textSize="@dimen/otp_box_txt_size" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginLeft="@dimen/text_size_10sp"
+                            android:layout_marginRight="@dimen/text_size_10sp"
+                            android:background="@color/black"
+                            android:id="@+id/v_2"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/otp_box_height"
+                        android:layout_weight="2"
+                        android:background="@drawable/otp_border"
+                        android:orientation="vertical"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        >
+
+                        <EditText
+                            android:id="@+id/numthree"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/edt_otp_box_height"
+                            android:inputType="number"
+                            android:maxLength="1"
+                            android:textAlignment="center"
+                            android:textColor="@color/border_color"
+                            android:textSize="@dimen/otp_box_txt_size" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginLeft="@dimen/text_size_10sp"
+                            android:layout_marginRight="@dimen/text_size_10sp"
+                            android:background="@color/black"
+                            android:id="@+id/v_3"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/otp_box_height"
+                        android:layout_weight="2"
+                        android:background="@drawable/otp_border"
+                        android:orientation="vertical"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        >
+
+                        <EditText
+                            android:id="@+id/numfour"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/edt_otp_box_height"
+                            android:inputType="number"
+                            android:maxLength="1"
+                            android:textAlignment="center"
+                            android:textColor="@color/border_color"
+                            android:textSize="@dimen/otp_box_txt_size" />
+
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginLeft="@dimen/text_size_10sp"
+                            android:layout_marginRight="@dimen/text_size_10sp"
+                            android:background="@color/black"
+                            android:id="@+id/v_4"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/otp_box_height"
+                        android:layout_weight="2"
+                        android:background="@drawable/otp_border"
+                        android:orientation="vertical"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        >
+
+                        <EditText
+                            android:id="@+id/numfive"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/edt_otp_box_height"
+                            android:inputType="number"
+                            android:maxLength="1"
+                            android:textAlignment="center"
+                            android:textColor="@color/border_color"
+                            android:textSize="@dimen/otp_box_txt_size" />
+
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginLeft="@dimen/text_size_10sp"
+                            android:layout_marginRight="@dimen/text_size_10sp"
+                            android:background="@color/black"
+                            android:id="@+id/v_5"
+                            />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/otp_box_height"
+                        android:layout_weight="2"
+                        android:background="@drawable/otp_border"
+                        android:orientation="vertical"
+                        android:layout_marginStart="10dp"
+                        >
+
+                        <EditText
+                            android:id="@+id/numsix"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/edt_otp_box_height"
+                            android:inputType="number"
+                            android:maxLength="1"
+                            android:textAlignment="center"
+                            android:textColor="@color/border_color"
+                            android:textSize="@dimen/otp_box_txt_size" />
+
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginLeft="@dimen/text_size_10sp"
+                            android:layout_marginRight="@dimen/text_size_10sp"
+                            android:background="@color/black"
+                            android:id="@+id/v_6"
+                            />
+
+                    </LinearLayout>
+
+
+
+
+
+                </LinearLayout>
+
+            </RelativeLayout>-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/otp_box_height"
+                android:layout_marginTop="@dimen/register_otp_code_margin_top"
+                android:id="@+id/rel_otp_lay"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/txt_otp_code"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                >
+
+                <LinearLayout
+                    android:id="@+id/codelayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="12">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/otp_box_height"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="2"
+                        android:background="@drawable/otp_border"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/numone"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/otp_box_height"
+                            android:inputType="number"
+                            android:maxLength="1"
+                            android:textAlignment="center"
+                            android:textColor="@color/border_color"
+                            android:textColorHint="@color/border_color"
+                            android:textSize="@dimen/otp_box_txt_size" />
+
+                    </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/otp_box_height"
+                    android:layout_weight="2"
+                    android:background="@drawable/otp_border"
+                    android:orientation="vertical"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    >
+                    <EditText
+                        android:id="@+id/numtwo"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/otp_box_height"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:textAlignment="center"
+                        android:textColor="@color/border_color"
+                        android:textColorHint="@color/border_color"
+                        android:textSize="@dimen/otp_box_txt_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/otp_box_height"
+                    android:layout_weight="2"
+                    android:background="@drawable/otp_border"
+                    android:orientation="vertical"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    >
+                    <EditText
+                        android:id="@+id/numthree"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/otp_box_height"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:textAlignment="center"
+                        android:textColor="@color/border_color"
+                        android:textSize="@dimen/otp_box_txt_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/otp_box_height"
+                    android:layout_weight="2"
+                    android:background="@drawable/otp_border"
+                    android:orientation="vertical"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    >
+                    <EditText
+                        android:id="@+id/numfour"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/otp_box_height"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:textAlignment="center"
+                        android:textColor="@color/border_color"
+                        android:textSize="@dimen/otp_box_txt_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/otp_box_height"
+                    android:layout_weight="2"
+                    android:background="@drawable/otp_border"
+                    android:orientation="vertical"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    >
+                    <EditText
+                        android:id="@+id/numfive"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/otp_box_height"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:textAlignment="center"
+                        android:textColor="@color/border_color"
+                        android:textSize="@dimen/otp_box_txt_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/otp_box_height"
+                    android:layout_weight="2"
+                    android:background="@drawable/otp_border"
+                    android:orientation="vertical"
+                    android:layout_marginStart="10dp"
+                    >
+
+
+                    <EditText
+                        android:id="@+id/numsix"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/otp_box_height"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:textAlignment="center"
+                        android:textColor="@color/border_color"
+                        android:textSize="@dimen/otp_box_txt_size" />
+
+                </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/card_reg_otp"
+                android:layout_width="@dimen/register_otp_next_btn_width"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/login_phone_edit_margin_top"
+                android:background="@drawable/varify_border"
+                android:padding="@dimen/login_phone_edit_padding"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rel_otp_lay">
+
+                <ImageView
+                    android:id="@+id/check_circle"
+                    android:layout_width="@dimen/register_otp_image_varify_weidth_height"
+                    android:layout_height="@dimen/register_otp_image_varify_weidth_height"
+                    android:layout_marginEnd="5dp"
+                    android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:text="@string/next"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/login_phone_edit_text_size"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/check_circle"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

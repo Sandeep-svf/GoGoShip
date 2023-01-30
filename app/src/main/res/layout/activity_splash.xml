@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/rlBaseLayout"
+    >
+
+    <ImageView
+        android:layout_width="@dimen/splash_wimg_width"
+        android:layout_height="@dimen/splash_wimg_height"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/splash_logo"
+        android:src="@drawable/logosplash"
+        />
+
+    <ImageView
+        android:layout_width="@dimen/splash_plane_width"
+        android:layout_height="@dimen/splash_plane_height"
+        app:layout_constraintTop_toBottomOf="@+id/splash_logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/splash_margin_top"
+        android:src="@drawable/envo"
+        android:id="@+id/img_envo"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/img_envo"
+        android:layout_marginTop="@dimen/splash_margin_top"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/a_fullship_company"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

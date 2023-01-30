@@ -1,0 +1,1037 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    >
+
+       <androidx.cardview.widget.CardView
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:id="@+id/card_my_order"
+             app:cardElevation="10dp"
+             android:backgroundTint="@color/cream_color"
+             android:paddingBottom="10dp"
+             app:layout_constraintTop_toTopOf="parent"
+             android:visibility="visible"
+             android:layout_marginTop="20dp"
+             >
+
+             <androidx.constraintlayout.widget.ConstraintLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:backgroundTint="@color/cream_color"
+                 android:paddingBottom="10dp"
+                 >
+
+
+
+                 <com.google.android.material.imageview.ShapeableImageView
+                     android:layout_width="@dimen/turkey_logo_width_height"
+                     android:layout_height="@dimen/turkey_logo_width_height"
+                     app:layout_constraintTop_toTopOf="parent"
+                     app:layout_constraintBottom_toBottomOf="parent"
+                     app:layout_constraintStart_toStartOf="parent"
+                     android:id="@+id/turkey_logo1_copy"
+                     android:layout_marginStart="@dimen/turkey_logo_margin_left"
+                     app:shapeAppearanceOverlay="@style/circle"
+                     app:strokeColor="@color/yellow"
+                     app:strokeWidth="1.5dp"
+                     android:layout_marginTop="10dp"
+                     app:layout_goneMarginStart="2dp"
+                     android:scaleType="fitXY"
+                     />
+
+                 <ImageView
+                     android:layout_width="@dimen/my_order_filter_width_height"
+                     android:layout_height="@dimen/my_order_filter_width_height"
+                     app:layout_constraintStart_toEndOf="@+id/turkey_logo1_copy"
+                     android:layout_marginTop="20dp"
+                     android:layout_marginStart="@dimen/turkey_logo_margin_left"
+                     android:src="@drawable/file_actecment"
+                     android:id="@+id/img_attachment"
+                     app:layout_constraintTop_toTopOf="parent"
+                     />
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     app:layout_constraintStart_toEndOf="@+id/img_attachment"
+                     android:text="TR-123456"
+                     android:layout_marginTop="20dp"
+                     android:textSize="@dimen/my_order_list_product_text_size"
+                     android:layout_marginStart="@dimen/order_list_prod_no_margin_left"
+                     android:id="@+id/txt_order_n0"
+                     app:layout_constraintTop_toTopOf="parent"
+                     android:textColor="@color/black"
+                     />
+
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     app:layout_constraintStart_toEndOf="@+id/txt_order_n0"
+                     android:layout_marginStart="20dp"
+                     android:text="$ 20.99"
+                     app:layout_constraintTop_toTopOf="parent"
+                     android:layout_marginTop="20dp"
+                     android:textColor="@color/black"
+                     android:id="@+id/order_price"
+                     android:textSize="@dimen/my_order_list_product_text_size"
+
+                     />
+
+                 <TextView
+                     android:layout_width="80dp"
+                     android:layout_height="30dp"
+                     android:background="@drawable/my_order_button_border"
+                     app:layout_constraintEnd_toEndOf="parent"
+                     app:layout_constraintTop_toTopOf="parent"
+                     android:text="@string/buy_me"
+                     android:textSize="@dimen/my_order_list_product_text_size"
+                     android:gravity="center"
+                     android:fontFamily="sans-serif-medium"
+                     android:backgroundTint="@color/yellow"
+                     android:textColor="@color/light_gray"
+                     android:layout_marginEnd="@dimen/turkey_logo_margin_left"
+                     android:layout_marginTop="15dp"
+                     android:id="@+id/txt_buynow"
+                     android:visibility="gone"
+                     />
+
+
+                 <TextView
+                     android:layout_width="80dp"
+                     android:layout_height="30dp"
+                     android:background="@drawable/my_order_button_border"
+                     app:layout_constraintEnd_toEndOf="parent"
+                     app:layout_constraintTop_toTopOf="parent"
+                     android:text="Transit"
+                     android:textSize="@dimen/my_order_list_product_text_size"
+                     android:gravity="center"
+                     android:fontFamily="sans-serif-medium"
+                     android:textColor="@color/white"
+                     android:layout_marginEnd="@dimen/turkey_logo_margin_left"
+                     android:layout_marginTop="15dp"
+                     android:id="@+id/txt_trans"
+                     android:visibility="visible"
+                     />
+
+
+                 <ImageView
+                     android:layout_width="@dimen/my_order_filter_width_height"
+                     android:layout_height="@dimen/my_order_filter_width_height"
+                     app:layout_constraintStart_toEndOf="@+id/turkey_logo1_copy"
+                     android:layout_marginTop="10dp"
+                     android:layout_marginStart="@dimen/turkey_logo_margin_left"
+                     android:src="@drawable/dobul_chek"
+                     android:id="@+id/img_right"
+                     app:layout_constraintTop_toBottomOf="@+id/img_attachment"
+                     />
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     app:layout_constraintStart_toEndOf="@+id/img_attachment"
+                     android:text="9-04-2022 / 4.30 PM"
+                     android:layout_marginTop="20dp"
+                     android:layout_marginStart="@dimen/order_list_prod_no_margin_left"
+                     android:id="@+id/txt_date_time"
+                     app:layout_constraintTop_toBottomOf="@+id/txt_order_n0"
+                     android:textColor="@color/black"
+                     android:textSize="@dimen/my_order_list_product_text_size"
+
+                     />
+
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     app:layout_constraintEnd_toEndOf="parent"
+                     android:text="15-04-2022"
+                     android:layout_marginTop="15dp"
+                     android:layout_marginStart="10dp"
+                     android:id="@+id/txt_date"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                     android:textColor="@color/black"
+                     android:layout_marginEnd="@dimen/turkey_logo_margin_left"
+                     android:textSize="@dimen/my_order_list_product_text_size"
+
+                     />
+
+                 <ImageView
+                     android:layout_width="@dimen/my_order_filter_width_height"
+                     android:layout_height="@dimen/my_order_filter_width_height"
+                     app:layout_constraintEnd_toStartOf="@+id/txt_date"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                     android:src="@drawable/ship_car"
+                     android:layout_marginTop="10dp"
+                     android:layout_marginEnd="10dp"
+                     />
+
+
+             </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+         </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/card_order_detail"
+        app:cardElevation="10dp"
+        android:backgroundTint="@color/white"
+        android:paddingBottom="10dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:paddingEnd="@dimen/turkey_logo_margin_left"
+            android:backgroundTint="@color/white"
+            android:paddingBottom="10dp"
+
+            >
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="@dimen/turkey_logo_width_height"
+                android:layout_height="@dimen/turkey_logo_width_height"
+                app:layout_constraintTop_toTopOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+                android:id="@+id/turkey_logo2"
+                android:layout_marginEnd="@dimen/turkey_logo_margin_left"
+                android:layout_marginTop="20dp"
+                app:strokeColor="@color/yellow"
+                app:strokeWidth="1.5dp"
+                app:shapeAppearanceOverlay="@style/circle"
+                android:scaleType="fitXY"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/turkey_logo2"
+                android:layout_marginStart="@dimen/turkey_logo_margin_left"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="20dp"
+                android:text="TR-#123456"
+                android:textColor="@color/black"
+                android:textSize="@dimen/product_id_text_size"
+                android:id="@+id/prod_no"
+                />
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/status_orderr"
+                android:id="@+id/status_lebel"
+                app:layout_constraintEnd_toStartOf="@+id/status_value"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginEnd="10dp"
+                android:textSize="@dimen/my_order_list_product_text_size"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="Transit"
+                android:textColor="@color/black"
+                android:id="@+id/status_value"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="20dp"
+                android:textSize="@dimen/my_order_list_product_text_size"
+                />
+
+
+            <View
+                android:layout_width="300dp"
+                android:layout_height=".1dp"
+                app:layout_constraintTop_toBottomOf="@+id/status_lebel"
+                app:layout_constraintStart_toEndOf="@+id/turkey_logo2"
+                android:id="@+id/view_check"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/view_check"
+                app:layout_constraintStart_toEndOf="@+id/turkey_logo2"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="@dimen/turkey_logo_margin_left"
+                android:text="Product Name"
+                android:textColor="@color/black"
+                android:id="@+id/product_name"
+                android:textSize="@dimen/my_order_list_product_text_size"
+                android:singleLine="true"
+                android:maxWidth="130dp"
+                />
+
+
+            <TextView
+                android:layout_width="@dimen/trendyol_width"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/product_name"
+                app:layout_constraintStart_toEndOf="@+id/turkey_logo2"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="@dimen/turkey_logo_margin_left"
+                android:text="trendyol"
+                android:textColor="@color/black"
+                android:id="@+id/txt_trendyol"
+                android:textSize="@dimen/my_order_list_product_text_size"
+                android:singleLine="true"
+                />
+
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:layout_constraintStart_toEndOf="@+id/txt_trendyol"
+                android:layout_marginTop="7dp"
+                android:layout_marginStart="7dp"
+                android:src="@drawable/file_actecment"
+                android:id="@+id/web_link"
+                app:layout_constraintTop_toBottomOf="@+id/product_name"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/txt_trendyol"
+                app:layout_constraintStart_toEndOf="@+id/turkey_logo2"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="@dimen/turkey_logo_margin_left"
+                android:text="@string/quantity_order"
+                android:textColor="@color/black"
+                android:id="@+id/qty_lebel"
+                android:textSize="@dimen/my_order_list_product_text_size"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/qty_lebel"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/black"
+                android:id="@+id/qty_value"
+                app:layout_constraintTop_toBottomOf="@+id/txt_trendyol"
+                android:text="1"
+                android:textSize="@dimen/my_order_list_product_text_size"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/qty_lebel"
+                app:layout_constraintStart_toEndOf="@+id/turkey_logo2"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="@dimen/turkey_logo_margin_left"
+                android:text="@string/colr"
+                android:textColor="@color/black"
+                android:id="@+id/color_lebel"
+                android:textSize="@dimen/my_order_list_product_text_size"
+                />
+
+            <TextView
+                android:layout_width="@dimen/trendyol_width"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/qty_lebel"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/black"
+                android:id="@+id/color_lebel_value"
+                app:layout_constraintTop_toBottomOf="@+id/qty_value"
+                android:text="Red"
+                android:textSize="@dimen/my_order_list_product_text_size"
+                android:singleLine="true"
+                />
+
+
+            <TextView
+                android:id="@+id/size_lebel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/turkey_logo_margin_left"
+                android:layout_marginTop="10dp"
+                android:text="@string/size_orde"
+                android:textColor="@color/black"
+                android:textSize="@dimen/my_order_list_product_text_size"
+                app:layout_constraintStart_toEndOf="@+id/turkey_logo2"
+                app:layout_constraintTop_toBottomOf="@+id/color_lebel"
+
+                />
+
+
+            <TextView
+                android:layout_width="@dimen/trendyol_width"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/qty_lebel"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/black"
+                android:id="@+id/size_lebel_value"
+                app:layout_constraintTop_toBottomOf="@+id/color_lebel_value"
+                android:text="L"
+                android:textSize="@dimen/my_order_list_product_text_size"
+                android:singleLine="true"
+                />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/size_lebel"
+                app:layout_constraintStart_toEndOf="@+id/turkey_logo2"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/varify_border"
+                android:id="@+id/card_reg_final"
+                android:visibility="gone"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:text="@string/total_sum"
+                    android:textColor="@color/black"
+                    android:id="@+id/check_circle"
+                    android:layout_marginEnd="5dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@+id/check_circle"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:text="$ 25.30"
+                    android:textColor="@color/black"
+                    android:layout_marginEnd="10dp"
+                    android:textSize="14sp"
+                    android:layout_marginStart="10dp"
+                    android:id="@+id/order_det_total_amt"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="9-04-2022 / 4.30PM"
+                android:textColor="@color/black"
+                android:id="@+id/txt_date_time2"
+                app:layout_constraintTop_toBottomOf="@+id/view_check"
+                android:layout_marginTop="20dp"
+                android:textSize="@dimen/my_order_list_product_text_size"
+                />
+
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:text="Status:"
+                android:id="@+id/img_doublecheck1"
+                app:layout_constraintEnd_toStartOf="@+id/txt_date_time2"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/light_gray"
+                app:layout_constraintTop_toBottomOf="@+id/view_check"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/dobul_chek"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="9-04-2022 / 4.30PM"
+                android:textColor="@color/black"
+                android:id="@+id/txt_date_time_double"
+                app:layout_constraintTop_toBottomOf="@+id/txt_date_time2"
+                android:layout_marginTop="10dp"
+                android:textSize="@dimen/my_order_list_product_text_size"
+                />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:text="Status:"
+                android:id="@+id/img_doublecheck"
+                app:layout_constraintEnd_toStartOf="@+id/txt_date_time_double"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/light_gray"
+                app:layout_constraintTop_toBottomOf="@+id/txt_date_time2"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_baseline_check_circle_24"
+                android:backgroundTint="@color/yellow"
+
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="15-04-2022"
+                android:textColor="@color/black"
+                android:id="@+id/track_date"
+                app:layout_constraintTop_toBottomOf="@+id/txt_date_time_double"
+                android:layout_marginTop="10dp"
+                android:textSize="@dimen/my_order_list_product_text_size"
+                />
+
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:text="Status:"
+                android:id="@+id/track_img"
+                app:layout_constraintEnd_toStartOf="@+id/track_date"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/light_gray"
+                app:layout_constraintTop_toBottomOf="@+id/txt_date_time_double"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ship_car"
+
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="No"
+                android:textColor="@color/black"
+                android:id="@+id/txt_coupen"
+                app:layout_constraintTop_toBottomOf="@+id/track_date"
+                android:layout_marginTop="10dp"
+                android:textSize="@dimen/my_order_list_product_text_size"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/coupen_code_order"
+                android:id="@+id/coupen_code_lebel"
+                app:layout_constraintEnd_toStartOf="@+id/txt_coupen"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@+id/track_date"
+                android:layout_marginEnd="10dp"
+                android:textSize="@dimen/my_order_list_product_text_size"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="No"
+                android:textColor="@color/black"
+                android:id="@+id/txt_insurance_val"
+                app:layout_constraintTop_toBottomOf="@+id/txt_coupen"
+                android:layout_marginTop="10dp"
+                android:textSize="@dimen/my_order_list_product_text_size"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/insurance_orderr"
+                android:id="@+id/insurance_lebel"
+                app:layout_constraintEnd_toStartOf="@+id/txt_insurance_val"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@+id/coupen_code_lebel"
+                android:layout_marginEnd="10dp"
+                android:textSize="@dimen/my_order_list_product_text_size"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="300$"
+                android:textColor="@color/black"
+                android:id="@+id/value_fees"
+                app:layout_constraintTop_toBottomOf="@+id/txt_insurance_val"
+                android:layout_marginTop="10dp"
+                android:textSize="@dimen/my_order_list_product_text_size"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fees_orderr"
+                android:id="@+id/lebel_fees"
+                app:layout_constraintEnd_toStartOf="@+id/value_fees"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@+id/insurance_lebel"
+                android:layout_marginEnd="5dp"
+                android:textSize="@dimen/my_order_list_product_text_size"
+                />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/value_fees"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/varify_border"
+                android:id="@+id/card_total_right"
+                android:visibility="gone"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:text="Total"
+                    android:textColor="@color/black"
+                    android:id="@+id/check_circle1"
+                    android:layout_marginEnd="5dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@+id/check_circle1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:text="$ 25.30"
+                    android:textColor="@color/black"
+                    android:layout_marginEnd="10dp"
+                    android:textSize="14sp"
+                    android:layout_marginStart="10dp"
+                    android:id="@+id/order_det_total_amt1"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/approved_order"
+                android:textColor="@color/black"
+                android:id="@+id/tx_approve"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/size_lebel"
+                app:layout_constraintBottom_toTopOf="@+id/cons_progress_bar"
+                android:textSize="@dimen/my_order_list_product_text_size"
+                android:layout_marginStart="@dimen/turkey_logo_margin_left"
+                android:background="@drawable/my_order_button_border"
+                android:backgroundTint="@color/yellow"
+                app:layout_constraintStart_toEndOf="@+id/turkey_logo2"
+                android:visibility="visible"
+                android:padding="10dp"
+                />
+
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/value_fees"
+                app:layout_constraintBottom_toTopOf="@+id/cons_progress_bar"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@drawable/varify_border"
+                android:id="@+id/card_reg_final2"
+                android:visibility="gone"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:text="Total"
+                    android:textColor="@color/black"
+                    android:id="@+id/check_circle2"
+                    android:layout_marginEnd="5dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@+id/check_circle2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:text="$ 25.30"
+                    android:textColor="@color/black"
+                    android:layout_marginEnd="10dp"
+                    android:textSize="14sp"
+                    android:layout_marginStart="10dp"
+                    android:id="@+id/order_det_total_amt2"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/card_reg_final"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:id="@+id/cons_progress_bar"
+                android:layout_marginTop="30dp"
+                >
+
+
+                <!--  <com.kofigyan.stateprogressbar.StateProgressBar
+                      android:id="@+id/your_state_progress_bar_id"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_centerInParent="true"
+                      app:spb_animateToCurrentProgressState="true"
+                      app:spb_checkStateCompleted="true"
+                      app:spb_currentStateDescriptionColor="#F4DC05"
+                      app:spb_currentStateNumber="one"
+                      app:spb_maxStateNumber="four"
+                      app:spb_stateBackgroundColor="#F4DC05"
+                      app:spb_stateDescriptionColor="#F4DC05"
+                      app:spb_stateForegroundColor="#F4DC05"
+                      app:spb_stateNumberBackgroundColor="@color/black"
+                      app:spb_stateNumberForegroundColor="@color/black" />-->
+
+                <View
+                    android:layout_width="35dp"
+                    android:layout_height="5dp"
+                    android:background="@color/yellow"
+                    android:id="@+id/view1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    app:layout_constraintStart_toEndOf="@+id/view1"
+                    android:id="@+id/circle1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:background="@drawable/circle_background"
+                    >
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:src="@drawable/ship_car_black"
+                        android:padding="2dp"
+                        android:id="@+id/truck_1"
+                        android:visibility="gone"
+                        />
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+                <View
+                    android:layout_width="60dp"
+                    android:layout_height="5dp"
+                    android:background="@color/yellow"
+                    android:id="@+id/view2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/circle1"
+                    />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    app:layout_constraintStart_toEndOf="@+id/view2"
+                    android:id="@+id/circle2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:background="@drawable/circle_background"
+                    >
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:src="@drawable/ship_car_black"
+                        android:padding="2dp"
+                        android:id="@+id/truck_2"
+                        android:visibility="gone"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+                <View
+                    android:layout_width="60dp"
+                    android:layout_height="5dp"
+                    android:background="@color/yellow"
+                    android:id="@+id/view3"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/circle2"
+                    />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    app:layout_constraintStart_toEndOf="@+id/view3"
+                    android:id="@+id/circle3"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:background="@drawable/circle_background"
+                    >
+
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:src="@drawable/ship_car_black"
+                        android:padding="2dp"
+                        android:id="@+id/truck_3"
+                        android:visibility="gone"
+                        />
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+                <View
+                    android:layout_width="60dp"
+                    android:layout_height="5dp"
+                    android:background="@color/yellow"
+                    android:id="@+id/view4"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/circle3"
+                    />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    app:layout_constraintStart_toEndOf="@+id/view4"
+                    android:id="@+id/circle4"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:background="@drawable/circle_background"
+                    >
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:src="@drawable/ship_car_black"
+                        android:padding="2dp"
+                        android:id="@+id/truck_4"
+                        android:visibility="gone"
+                        />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <View
+                    android:layout_width="50dp"
+                    android:layout_height="5dp"
+                    android:background="@color/yellow"
+                    android:id="@+id/view5"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/circle4"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/cream_color"
+            android:paddingBottom="10dp"
+            android:visibility="gone"
+            >
+
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                 app:layout_constraintStart_toStartOf="parent"
+                android:src="@drawable/turkeylogo"
+                android:id="@+id/turkey_logo"
+                android:layout_marginStart="20dp"
+                />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:layout_constraintStart_toEndOf="@+id/turkey_logo"
+                android:layout_marginTop="20dp"
+               android:layout_marginStart="20dp"
+                android:src="@drawable/file_actecment"
+                android:id="@+id/img_attachment1"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/img_attachment1"
+                android:text="TR-123456"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:id="@+id/txt_order_n01"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textColor="@color/light_gray"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/txt_order_n01"
+                android:layout_marginStart="20dp"
+                android:text="$ 20.99"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/light_gray"
+                />
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:background="@drawable/my_order_button_border"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="Transit"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:fontFamily="sans-serif-medium"
+                android:backgroundTint="@color/english_blue"
+                android:textColor="@color/white"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="15dp"
+                android:id="@+id/txt_trans1"
+                />
+
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:layout_constraintStart_toEndOf="@+id/turkey_logo"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/dobul_chek"
+                android:id="@+id/img_right1"
+                app:layout_constraintTop_toBottomOf="@+id/img_attachment1"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/img_attachment1"
+                android:text="9-04-2022 / 4.30 PM"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:id="@+id/txt_date_time1"
+                app:layout_constraintTop_toBottomOf="@+id/txt_order_n01"
+                android:textColor="@color/light_gray"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               app:layout_constraintEnd_toEndOf="parent"
+                android:text="15-04-2022"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="10dp"
+                android:id="@+id/txt_date1"
+                app:layout_constraintTop_toBottomOf="@+id/txt_trans1"
+                android:textColor="@color/light_gray"
+               android:layout_marginEnd="20dp"
+                />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:layout_constraintEnd_toStartOf="@+id/txt_date1"
+                app:layout_constraintTop_toBottomOf="@+id/txt_trans1"
+                android:src="@drawable/ship_car"
+                android:layout_marginTop="10dp"
+
+               android:layout_marginEnd="10dp"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

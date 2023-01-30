@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/background"
+
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+
+        >
+
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/register_otp_top_image_height"
+        app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+       android:src="@drawable/reglogo"
+        android:scaleType="fitXY"
+        android:id="@+id/img_login_screen"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/img_login_screen"
+        android:layout_marginTop="@dimen/register_otp_cardview_margin_top"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:cardCornerRadius="20dp"
+        android:orientation="vertical"
+        android:id="@+id/card_reg"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_card_background"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="30dp"
+
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="10dp"
+                android:id="@+id/cons_main_toolbar_final"
+                >
+
+                <ImageView
+                    android:layout_width="@dimen/toolbar_back_width_height"
+                    android:layout_height="@dimen/toolbar_back_width_height"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:src="@drawable/backarrow"
+                    app:tint="@color/border_color" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:orientation="horizontal"
+
+                    >
+
+
+                    <TextView
+                        android:id="@+id/num_txt"
+                        android:layout_width="@dimen/regis_otp_circle_width_height"
+                        android:layout_height="@dimen/regis_otp_circle_width_height"
+                        android:background="@drawable/bg_red_offwhite"
+                        android:backgroundTint="@color/off_white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="@dimen/regis_otp_circle_width_height"
+                        android:layout_marginStart="@dimen/regis_otp_circle_width_height"
+                        android:layout_height="15dp"
+                        android:background="@drawable/bg_red"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+         <!--   <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:layout_constraintTop_toBottomOf="@+id/cons_main_toolbar"
+                android:background="@drawable/edit_text_box"
+                android:layout_marginTop="@dimen/login_phone_edit_margin_top"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:id="@+id/cons_lay_provinco"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                >
+
+                <EditText
+                    android:id="@+id/edt_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@android:color/transparent"
+                    android:gravity="start"
+                    android:hint="@string/province"
+                    android:padding="@dimen/login_phone_edit_padding"
+                    android:textColor="@color/border_color"
+                    android:textColorHint="@color/border_color"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout_editor_absoluteX="0dp"
+                    android:textSize="@dimen/login_phone_edit_text_size"
+                    />
+
+
+                <ImageView
+                    android:layout_width="@dimen/toolbar_back_width_height"
+                    android:layout_height="@dimen/toolbar_back_width_height"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:src="@drawable/downarrow"
+                    android:layout_marginEnd="10dp"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/login_phone_edit_margin_top"
+                android:id="@+id/cons_lay_provinco"
+                app:layout_constraintTop_toBottomOf="@+id/cons_main_toolbar_final"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:background="@drawable/edit_text_box"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                >
+
+               <!-- <EditText
+                    android:id="@+id/edt_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toStartOf="@+id/province_dropdown"
+                    android:background="@android:color/transparent"
+                    android:gravity="start"
+                    android:hint="@string/province"
+                    android:padding="@dimen/login_phone_edit_padding"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/border_color"
+                    android:textColorHint="@color/border_color"
+                    android:textSize="@dimen/login_phone_edit_text_size" />-->
+
+                <Spinner
+                    android:id="@+id/sp_proviance"
+                    style="@style/SpinnerwithNoArrow"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toStartOf="@+id/province_dropdown"
+                    android:background="@null"
+                    android:popupBackground="@color/white"
+                    android:spinnerMode="dropdown"
+                    android:visibility="visible" />
+
+
+                <LinearLayout
+                    android:id="@+id/province_dropdown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="5dp"
+                    android:padding="6dp">
+
+                    <ImageView
+                        android:layout_width="@dimen/toolbar_back_width_height"
+                        android:layout_height="@dimen/toolbar_back_width_height"
+                        android:src="@drawable/downarrow"
+                        tools:ignore="UseAppTint" />
+
+                </LinearLayout>
+
+
+
+
+            </RelativeLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:layout_constraintTop_toBottomOf="@+id/cons_lay_provinco"
+                android:background="@drawable/edit_text_box"
+                android:layout_marginTop="@dimen/login_phone_edit_margin_top"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:id="@+id/cons_lay_address"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                >
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_centerInParent="true"
+                    android:background="@android:color/transparent"
+                    android:gravity="start"
+                    android:textColor="@color/border_color"
+                    android:padding="@dimen/login_phone_edit_padding"
+                    android:textSize="@dimen/login_phone_edit_text_size"
+                    android:hint="@string/address"
+                    android:id="@+id/edt_reg_detail_add"
+                    android:textColorHint="@color/border_color"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:layout_constraintTop_toBottomOf="@+id/cons_lay_address"
+                android:background="@drawable/edit_text_box"
+                android:layout_marginTop="@dimen/login_phone_edit_margin_top"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:id="@+id/cons_lay_landmark"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                >
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_centerInParent="true"
+                    android:background="@android:color/transparent"
+                    android:gravity="start"
+                    android:textColor="@color/border_color"
+                    android:padding="@dimen/login_phone_edit_padding"
+                    android:textSize="@dimen/login_phone_edit_text_size"
+                    android:hint="@string/landmark"
+                    android:id="@+id/edt_reg_det_landmark"
+                    android:textColorHint="@color/border_color"
+                    />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:layout_constraintTop_toBottomOf="@+id/cons_lay_landmark"
+                android:background="@drawable/edit_text_box"
+                android:layout_marginTop="@dimen/login_phone_edit_margin_top"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:id="@+id/cons_lay_password"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                >
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_centerInParent="true"
+                    android:background="@android:color/transparent"
+                    android:gravity="start"
+                    android:textColor="@color/border_color"
+                    android:padding="@dimen/login_phone_edit_padding"
+                    android:textSize="@dimen/login_phone_edit_text_size"
+                    android:hint="@string/password"
+                    android:id="@+id/edt_reg_det_pass"
+                    android:textColorHint="@color/border_color"
+                    />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+          <!--  <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:layout_constraintTop_toBottomOf="@+id/cons_lay_password"
+                android:background="@drawable/edit_text_box"
+                android:layout_marginTop="@dimen/login_phone_edit_margin_top"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:id="@+id/cons_lay_gender"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                >
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_centerInParent="true"
+                    android:background="@android:color/transparent"
+                    android:gravity="start"
+                    android:textColor="@color/border_color"
+                    android:padding="@dimen/login_phone_edit_padding"
+                    android:textSize="@dimen/login_phone_edit_text_size"
+                    android:hint="Gender"
+                    android:id="@+id/edt_reg_det_gender"
+                    android:textColorHint="@color/border_color"
+                    />
+
+                <ImageView
+                    android:layout_width="@dimen/toolbar_back_width_height"
+                    android:layout_height="@dimen/toolbar_back_width_height"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:src="@drawable/downarrow"
+                    android:layout_marginEnd="10dp"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/login_phone_edit_margin_top"
+                android:id="@+id/cons_lay_gender"
+                app:layout_constraintTop_toBottomOf="@+id/cons_lay_password"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:background="@drawable/edit_text_box"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                >
+
+               <!-- <EditText
+                    android:id="@+id/edt_reg_det_gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toStartOf="@+id/gender_dropdown"
+                    android:background="@android:color/transparent"
+                    android:gravity="start"
+                    android:hint="@string/gender"
+                    android:padding="@dimen/login_phone_edit_padding"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/border_color"
+                    android:textColorHint="@color/border_color"
+                    android:textSize="@dimen/login_phone_edit_text_size" />-->
+
+                <Spinner
+                    android:id="@+id/sp_gender"
+                    style="@style/SpinnerwithNoArrow"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toStartOf="@+id/gender_dropdown"
+                    android:background="@null"
+                    android:popupBackground="@color/white"
+                    android:spinnerMode="dropdown"
+                    android:visibility="visible" />
+
+
+                <LinearLayout
+                    android:id="@+id/gender_dropdown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="5dp"
+                    android:padding="6dp">
+
+                    <ImageView
+
+                        android:layout_width="@dimen/toolbar_back_width_height"
+                        android:layout_height="@dimen/toolbar_back_width_height"
+                        android:src="@drawable/downarrow"
+                        tools:ignore="UseAppTint" />
+
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="@dimen/register_otp_next_btn_width"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:padding="@dimen/login_phone_edit_padding"
+                app:layout_constraintTop_toBottomOf="@+id/cons_lay_gender"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/login_phone_edit_margin_top"
+                android:background="@drawable/varify_border"
+                android:id="@+id/card_reg_final"
+                >
+
+                <ImageView
+                    android:layout_width="@dimen/register_otp_image_varify_weidth_height"
+                    android:layout_height="@dimen/register_otp_image_varify_weidth_height"
+                    android:layout_marginStart="@dimen/reg_det_btn_margin_left"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:src="@drawable/ic_baseline_check_circle_outline_24"
+                    android:id="@+id/check_circle"
+                    android:layout_marginEnd="5dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@+id/check_circle"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:text="@string/finish"
+                    android:textColor="@color/black"
+                    android:layout_marginEnd="10dp"
+                    android:textSize="@dimen/login_phone_edit_text_size"
+                    android:layout_marginStart="10dp"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/card_reg"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="10dp"
+            android:paddingBottom="70dp"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
